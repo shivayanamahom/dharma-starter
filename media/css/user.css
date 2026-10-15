@@ -1382,9 +1382,6 @@ html {
 
 /* ---------- Остальной контент ---------- */
 
-.dharma-content {
-  padding-block: var(--dharma-space);
-}
 
 .dharma-content>.container>.row {
   align-items: start;
