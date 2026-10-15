@@ -689,14 +689,41 @@ html {
   transform: translateY(-2px) scale(1.04);
 }
 
-/* Корзина RadicalMart (html/layouts/components/radicalmart/cart) */
+/* Корзина и избранное в шапке (Dharma Shop / RadicalMart) */
 .dharma-header__cart {
   flex-shrink: 0;
   margin-left: auto;
-  margin-right: 20px;
+  margin-right: 0.75rem;
   display: flex;
   align-items: center;
+  gap: 1.25rem;
 }
+
+.dharma-header__cart .dharmaCartModule,
+.dharma-header__cart .dharmaFavoritesModule {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  line-height: 1;
+  color: var(--dharma-ink);
+  text-decoration: none;
+  padding: 0 !important;
+}
+
+.dharma-header__cart .dharmaCartModule svg,
+.dharma-header__cart .dharmaFavoritesModule svg {
+  width: 22px;
+  height: 22px;
+  display: block;
+  flex-shrink: 0;
+}
+
+.dharma-header__cart .dharmaCartModule:hover,
+.dharma-header__cart .dharmaFavoritesModule:hover {
+  color: var(--dharma-primary);
+}
+
 
 .dharma-header__cart-link {
   position: relative;
@@ -1805,6 +1832,11 @@ html {
   /* На десктопе место делит поиск (flex-grow), отступ у логотипа не нужен */
   .dharma-header__brand {
     margin-right: 0;
+  }
+
+  .dharma-header__cart {
+    margin-right: 20px;
+    gap: 1.5rem;
   }
 
   /* Страница ошибки: две колонки, картинка с кодом справа */
