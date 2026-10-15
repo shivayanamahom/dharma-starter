@@ -160,14 +160,14 @@ $bodyClasses = trim(
 	</div>
 
 	<?php
-	// Секции: свободные позиции для блоков страниц (главная и др.). Как и остальные
-	// позиции, выводятся без обёртки (style="none"): разметку секции задаёт сам модуль.
-	// Готовую обёртку html/layouts/chromes/section.php можно включить в настройках модуля
-	// («Расширенные» → «Стиль модуля»). Нужна ещё секция — добавьте её имя в этот
-	// массив и в <positions> файла templateDetails.xml.
+	// Секции: свободные позиции для блоков страниц (главная и др.).
+	// Выводятся с обёрткой хрома секции (style="section", html/layouts/chromes/section.php):
+	// оборачиваются в .container с теми же боковыми отступами, что и в шапке/контенте,
+	// и отображают заголовок модуля при включённой опции «Показать заголовок».
+	// Для полноширинных модулей укажите суффикс класса «full».
 	foreach (['section-1', 'section-2', 'section-3', 'section-4'] as $sectionPosition) :
 		if ($this->countModules($sectionPosition, true)) : ?>
-			<jdoc:include type="modules" name="<?php echo $sectionPosition; ?>" style="none" />
+			<jdoc:include type="modules" name="<?php echo $sectionPosition; ?>" style="section" />
 		<?php endif;
 	endforeach; ?>
 

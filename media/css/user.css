@@ -1383,7 +1383,6 @@ html {
 /* ---------- Остальной контент ---------- */
 
 .dharma-content {
-  min-height: 25rem;
   padding-block: var(--dharma-space);
 }
 
