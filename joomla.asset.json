@@ -19,7 +19,7 @@
       "uri": "user.css",
       "weight": 500,
       "dependencies": ["template.active", "template.active.language", "template.dharma.fonts"],
-      "version": "1.0.47"
+      "version": "1.0.48"
     },
     {
       "name": "template.dharma.userjs",
