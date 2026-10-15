@@ -1845,7 +1845,7 @@ html {
 @media (min-width: 1200px) {
   :root {
     --dharma-space: 2.5rem;
-    --dharma-section: 6rem;
+    --dharma-section: 4rem;
   }
 
   /* С 1200px места достаточно — возвращаем обычный вид меню */
