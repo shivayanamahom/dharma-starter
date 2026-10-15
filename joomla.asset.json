@@ -1,0 +1,33 @@
+{
+  "$schema": "https://developer.joomla.org/schemas/json-schema/web_assets.json",
+  "name": "dharma_starter",
+  "version": "1.2.20",
+  "description": "Local assets for the Dharma Starter Cassiopeia child template.",
+  "license": "GPL-2.0-or-later",
+  "assets": [
+    {
+      "name": "template.dharma.fonts",
+      "type": "style",
+      "uri": "fonts.css",
+      "weight": 100,
+      "dependencies": ["template.active"],
+      "version": "1.0.3"
+    },
+    {
+      "name": "template.dharma.user",
+      "type": "style",
+      "uri": "user.css",
+      "weight": 500,
+      "dependencies": ["template.active", "template.active.language", "template.dharma.fonts"],
+      "version": "1.0.47"
+    },
+    {
+      "name": "template.dharma.userjs",
+      "type": "script",
+      "uri": "user.js",
+      "attributes": {"type": "module"},
+      "dependencies": ["template.active", "bootstrap.offcanvas"],
+      "version": "1.0.9"
+    }
+  ]
+}

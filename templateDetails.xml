@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="template" client="site" method="upgrade">
+	<name>dharma_starter</name>
+	<version>1.2.20</version>
+	<creationDate>2026-09</creationDate>
+	<author>Dharma Starter</author>
+	<copyright>(C) 2026 Dharma Starter</copyright>
+	<license>GNU General Public License version 2 or later</license>
+	<description>TPL_DHARMA_STARTER_XML_DESCRIPTION</description>
+	<inheritable>0</inheritable>
+	<parent>cassiopeia</parent>
+	<scriptfile>script.php</scriptfile>
+	<files>
+		<filename>templateDetails.xml</filename>
+		<filename>joomla.asset.json</filename>
+		<filename>index.php</filename>
+		<filename>error.php</filename>
+		<filename>script.php</filename>
+		<folder>header</folder>
+		<folder>html</folder>
+		<folder>images</folder>
+		<folder>language</folder>
+	</files>
+	<media folder="media" destination="templates/site/dharma_starter">
+		<folder>css</folder>
+		<folder>js</folder>
+		<folder>fonts</folder>
+		<folder>images</folder>
+	</media>
+	<positions>
+		<position>menu</position>
+		<position>search</position>
+		<position>cart</position>
+		<position>header-actions</position>
+		<position>banner</position>
+		<position>breadcrumbs</position>
+		<position>main-top</position>
+		<position>main-bottom</position>
+		<position>section-1</position>
+		<position>section-2</position>
+		<position>section-3</position>
+		<position>section-4</position>
+		<position>sidebar-left</position>
+		<position>sidebar-right</position>
+		<position>footer</position>
+		<position>debug</position>
+	</positions>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.tpl_dharma_starter.ini</language>
+		<language tag="en-GB">en-GB/en-GB.tpl_dharma_starter.sys.ini</language>
+		<language tag="ru-RU">ru-RU/ru-RU.tpl_dharma_starter.ini</language>
+		<language tag="ru-RU">ru-RU/ru-RU.tpl_dharma_starter.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="branding" label="TPL_DHARMA_STARTER_FIELDSET_BRANDING">
+				<field name="logo_path" type="media" label="TPL_DHARMA_STARTER_LOGO_PATH" description="TPL_DHARMA_STARTER_LOGO_PATH_DESC" default="images/dharma_starter/logo.png" types="images" directory="dharma_starter" preview="tooltip" preview_width="240" preview_height="60" />
+				<field name="favicon_path" type="media" label="TPL_DHARMA_STARTER_FAVICON_PATH" description="TPL_DHARMA_STARTER_FAVICON_PATH_DESC" default="images/dharma_starter/favicon.svg" types="images" directory="dharma_starter" preview="tooltip" preview_width="64" preview_height="64" />
+				<field name="brand_name" type="text" label="TPL_DHARMA_STARTER_BRAND_NAME" default="Dharma" filter="string" />
+				<field name="contact_phone" type="text" label="TPL_DHARMA_STARTER_CONTACT_PHONE" description="TPL_DHARMA_STARTER_CONTACT_PHONE_DESC" default="+7 (000) 000-00-00" filter="string" />
+				<field name="contact_email" type="text" label="TPL_DHARMA_STARTER_CONTACT_EMAIL" description="TPL_DHARMA_STARTER_CONTACT_EMAIL_DESC" default="" filter="string" />
+				<field name="contact_address" type="text" label="TPL_DHARMA_STARTER_CONTACT_ADDRESS" description="TPL_DHARMA_STARTER_CONTACT_ADDRESS_DESC" default="" filter="string" />
+			</fieldset>
+			<fieldset name="layout" label="TPL_DHARMA_STARTER_FIELDSET_LAYOUT">
+				<field
+					name="header_layout"
+					type="filelist"
+					label="TPL_DHARMA_STARTER_HEADER_LAYOUT"
+					description="TPL_DHARMA_STARTER_HEADER_LAYOUT_DESC"
+					directory="templates/dharma_starter/header"
+					default="default"
+					filter="\.php$"
+					stripext="true"
+					hide_none="true"
+					hide_default="true"
+				/>
+
+				<field name="load_fontawesome" type="radio" label="TPL_DHARMA_STARTER_LOAD_FONTAWESOME" description="TPL_DHARMA_STARTER_LOAD_FONTAWESOME_DESC" default="1" layout="joomla.form.field.radio.switcher">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+
+				<field name="sticky_header" type="radio" label="TPL_DHARMA_STARTER_STICKY_HEADER" default="0" layout="joomla.form.field.radio.switcher">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+
+				<field name="social_heading" type="note" label="TPL_DHARMA_STARTER_FIELDSET_SOCIAL" class="alert alert-info" />
+
+				<field
+					name="social_telegram_enabled"
+					type="radio"
+					label="TPL_DHARMA_STARTER_SOCIAL_TELEGRAM_ENABLED"
+					default="0"
+					layout="joomla.form.field.radio.switcher"
+					>
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="social_telegram_url" type="text" label="TPL_DHARMA_STARTER_SOCIAL_TELEGRAM_URL" default="" filter="string" showon="social_telegram_enabled:1" />
+
+				<field
+					name="social_max_enabled"
+					type="radio"
+					label="TPL_DHARMA_STARTER_SOCIAL_MAX_ENABLED"
+					default="0"
+					layout="joomla.form.field.radio.switcher"
+					>
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="social_max_url" type="text" label="TPL_DHARMA_STARTER_SOCIAL_MAX_URL" default="" filter="string" showon="social_max_enabled:1" />
+
+				<field
+					name="social_vk_enabled"
+					type="radio"
+					label="TPL_DHARMA_STARTER_SOCIAL_VK_ENABLED"
+					default="0"
+					layout="joomla.form.field.radio.switcher"
+					>
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="social_vk_url" type="text" label="TPL_DHARMA_STARTER_SOCIAL_VK_URL" default="" filter="string" showon="social_vk_enabled:1" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>
