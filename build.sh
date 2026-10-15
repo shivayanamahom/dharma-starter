@@ -5,7 +5,7 @@ PROJECT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 DIST_DIR="$PROJECT_DIR/dist"
 STAGE_DIR="$PROJECT_DIR/stage"
 
-VERSION="1.2.20"
+VERSION=$(sed -n 's:.*<version>\(.*\)</version>.*:\1:p' "$PROJECT_DIR/templateDetails.xml" | head -1 | tr -d '[:space:]')
 ZIP_NAME="dharma_starter-$VERSION.zip"
 
 rm -rf "$DIST_DIR" "$STAGE_DIR"
@@ -38,3 +38,5 @@ cd "$PROJECT_DIR"
 rm -rf "$STAGE_DIR"
 
 echo "Build complete: $DIST_DIR/$ZIP_NAME"
+SHA256=$(shasum -a 256 "$DIST_DIR/$ZIP_NAME" | awk '{print $1}')
+echo "SHA256: $SHA256"

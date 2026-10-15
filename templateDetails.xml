@@ -51,6 +51,9 @@
 		<language tag="ru-RU">ru-RU/ru-RU.tpl_dharma_starter.ini</language>
 		<language tag="ru-RU">ru-RU/ru-RU.tpl_dharma_starter.sys.ini</language>
 	</languages>
+	<updateservers>
+		<server type="extension" priority="1" name="Dharma Starter Updates">https://raw.githubusercontent.com/shivayanamahom/dharma-starter/main/updates.xml</server>
+	</updateservers>
 	<config>
 		<fields name="params">
 			<fieldset name="branding" label="TPL_DHARMA_STARTER_FIELDSET_BRANDING">

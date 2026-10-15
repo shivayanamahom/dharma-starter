@@ -32,7 +32,21 @@
 ```bash
 ./build.sh
 ```
-Собранный пакет появится в `dist/dharma_starter-1.2.20.zip`.
+Собранный пакет появится в `dist/dharma_starter-<версия>.zip` и выведет SHA256-хэш для обновления ленты `updates.xml`.
+
+---
+
+## Обновления шаблона через Joomla
+
+Шаблон поддерживает нативную систему обновлений Joomla («Система» → «Обновления» → «Расширения»).
+
+В манифест `templateDetails.xml` подключен сервер обновлений:
+```xml
+<updateservers>
+    <server type="extension" priority="1" name="Dharma Starter Updates">https://raw.githubusercontent.com/shivayanamahom/dharma-starter/main/updates.xml</server>
+</updateservers>
+```
+При публикации нового релиза на GitHub и обновлении `updates.xml` на ветке `main`, административная панель Joomla автоматически предложит установить обновление в один клик.
 
 ---
 
