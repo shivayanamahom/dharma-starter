@@ -706,7 +706,7 @@ html {
   justify-content: center;
   position: relative;
   line-height: 1;
-  color: var(--dharma-ink);
+  color: var(--dharma-primary);
   text-decoration: none;
   padding: 0 !important;
 }
@@ -721,7 +721,7 @@ html {
 
 .dharma-header__cart .dharmaCartModule:hover,
 .dharma-header__cart .dharmaFavoritesModule:hover {
-  color: var(--dharma-primary);
+  color: var(--dharma-primary-dark);
 }
 
 
