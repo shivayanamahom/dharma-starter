@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <extension type="template" client="site" method="upgrade">
 	<name>dharma_starter</name>
-	<version>1.2.21</version>
+	<version>1.2.22</version>
 	<creationDate>2026-10</creationDate>
 	<author>Dharma Starter</author>
 	<copyright>(C) 2026 Dharma Starter</copyright>
