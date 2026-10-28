@@ -1767,6 +1767,59 @@ html {
   font-weight: 700;
 }
 
+/* Хлебные крошки: плашка с отступом снизу, разделитель «›», ссылки без подчёркивания */
+.dharma-content .mod-breadcrumbs__wrapper {
+  margin: var(--dharma-space) 0 calc(var(--dharma-space) * 1.4);
+}
+
+.dharma-content .mod-breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .15rem 0;
+  margin: 0;
+  padding: .6rem 1rem;
+  font-size: var(--dharma-fs-sm);
+  line-height: 1.4;
+  color: rgba(var(--dharma-ink-rgb), .65);
+  background: var(--dharma-surface-soft);
+  border: 1px solid var(--dharma-border);
+  border-radius: var(--dharma-radius);
+}
+
+.dharma-content .mod-breadcrumbs__divider {
+  float: none;
+  margin: 0 .6rem 0 0;
+  color: var(--dharma-primary);
+}
+
+.dharma-content .mod-breadcrumbs .breadcrumb-item {
+  display: inline-flex;
+  align-items: center;
+  padding-left: 0;
+}
+
+.dharma-content .mod-breadcrumbs .breadcrumb-item + .breadcrumb-item::before {
+  float: none;
+  padding: 0 .6rem;
+  color: var(--dharma-muted);
+  content: "\203A";
+}
+
+.dharma-content .mod-breadcrumbs .breadcrumb-item a {
+  color: var(--dharma-primary);
+  text-decoration: none;
+}
+
+.dharma-content .mod-breadcrumbs .breadcrumb-item a:hover {
+  text-decoration: underline;
+}
+
+.dharma-content .mod-breadcrumbs .breadcrumb-item.active {
+  font-weight: 500;
+  color: var(--dharma-ink);
+}
+
 /*
   Брейкпоинты — стандартные бутстраповские, mobile-first (min-width).
   Всегда держим их здесь, ЕДИНЫМ блоком в конце файла (после всех базовых
