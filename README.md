@@ -4,6 +4,14 @@
 [![Joomla](https://img.shields.io/badge/Joomla-4.x%20%7C%205.x%20%7C%206.x-orange.svg)](https://www.joomla.org/)
 [![License: GPL-2.0+](https://img.shields.io/badge/License-GPL--2.0%2B-blue.svg)](LICENSE.txt)
 
+<!-- ai-notice -->
+> [!NOTE]
+> **О проекте.** Этот проект написан при помощи ИИ для моего собственного использования и опубликован «как есть» (*as is*). Он может содержать ошибки и подходить не для всех сайтов и версий Joomla. Гарантий, поддержки и сроков исправления я не обещаю. Перед использованием изучите код и проверьте его на тестовой копии сайта, всё на ваш риск. Идеи и замечания приветствуются (Issues, Pull Request), но отвечу и приму их не обязательно.
+>
+> *AI-assisted and built for my own use. Provided **as is**, without warranty or support. Review the code and test on a staging copy first; use at your own risk. Issues and PRs are welcome, but no response is guaranteed.*
+
+<!-- /ai-notice -->
+
 Переиспользуемый дочерний шаблон на базе стандартного шаблона **Cassiopeia** для **Joomla 4, 5 и 6**. 
 
 Проект создан прежде всего для личного использования и разработки собственных сайтов/магазинов на Joomla, выложен в открытый доступ на GitHub для удобного версионирования, фиксации правок и дальнейшего развития.
